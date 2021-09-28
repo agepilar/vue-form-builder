@@ -16,7 +16,7 @@
                     :disabled="!permissions.canReOrderingSection"
             ></button>
 
-            <button :class="styles.BUTTON.SECONDARY"
+            <button :class="styles.BUTTON.PRIMARY"
                     title="Push Down"
                     @click="pushDown"
                     v-html="$form.getIcon('arrowDown')"
@@ -25,7 +25,7 @@
             ></button>
 
             <button
-                :class="styles.BUTTON.INFO"
+                :class="styles.BUTTON.PRIMARY"
                 @click="openConfiguration"
                 :disabled="!permissions.canEditSection"
             >
@@ -34,21 +34,21 @@
             </button>
 
             <button
-                :class="styles.BUTTON.DANGER"
+                :class="styles.BUTTON.WARNING"
                 @click="deleteSection"
                 :disabled="!permissions.canDeleteSection"
             >
                 <span v-html="$form.getIcon('trash')"></span>
                 <span>Delete</span>
             </button>
-
-            <component
-                v-if="postCustomButtonView"
-                :is="postCustomButtonView"
-                :section="section"
-                :permissions="permissions"
-            ></component>
         </div>
+
+        <component
+            v-if="postCustomButtonView"
+            :is="postCustomButtonView"
+            :section="section"
+            :permissions="permissions"
+        ></component>
     </div>
 </template>
 

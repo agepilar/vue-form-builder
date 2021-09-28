@@ -1,33 +1,43 @@
 <template>
     <div :class="[styles.CONTAINER.FLUID, 'form-padding', 'vue-form-builder']">
+
         <!-- top configuration -->
-        <FormConfiguration
-            :permissions="permissions"
-            v-model="formData.formConfig"
-        />
+        <div class="form-configuration-block pbottom-10">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="btn-row">
+                    <FormConfiguration
+                    :permissions="permissions"
+                    v-model="formData.formConfig"
+                    />
+                    </div>
+                </div>
 
-        <!-- form headline -->
-        <div class="form-headline-container" v-show="formData.formConfig.isShowHeadline">
-            <h1 v-text="formData.formConfig.headline"></h1>
-            <p v-text="formData.formConfig.subHeadline"></p>
+                <div class="col-md-4">
+                <AddSectionControl
+                v-if="permissions.canAddSection"
+                @addSectionNotify="addSection"
+                />
+                </div>
+            </div>
+
+            <!-- form headline -->
+            <div class="form-headline-container" v-show="formData.formConfig.isShowHeadline">
+                <h1 v-text="formData.formConfig.headline"></h1>
+                <p v-text="formData.formConfig.subHeadline"></p>
+            </div>
+
+                <SectionContainer
+                v-for="(sectionData) in sortedSections"
+                :section="sectionData"
+                :rows="formData.rows"
+                :controls="formData.controls"
+                :key="sectionData.uniqueId"
+                :permissions="permissions"
+                />
+          
         </div>
-
-        <!-- sections of the form -->
-        <SectionContainer
-            v-for="(sectionData) in sortedSections"
-            :section="sectionData"
-            :rows="formData.rows"
-            :controls="formData.controls"
-            :key="sectionData.uniqueId"
-            :permissions="permissions"
-        />
-
-        <!-- below all -->
-        <AddSectionControl
-            v-if="permissions.canAddSection"
-            @addSectionNotify="addSection"
-        />
-
+       
         <!-- global stuff -->
         <GlobalSidebar
             :formData="formData"

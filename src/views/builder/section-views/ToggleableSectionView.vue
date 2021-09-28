@@ -1,24 +1,20 @@
 <template>
     <div class="toggleable-section">
-        <div class="headline-block p5">
+        <div class="headline-block p5" @click="isVisible = !isVisible">
             <h2 :class="section.headlineAdditionalClass">
                 <!-- chevron icon to show/hide -->
                 <span class="toggle-item"
                   v-html="isVisible ? iconClose : iconOpen"
-                  @click="isVisible = !isVisible">
+                  >
                 </span>
 
                 <!-- headline -->
                 <span v-text="section.headline"
                       v-show="section.isShowHeadline">
                 </span>
-
-                <!-- subheadline -->
-                <small :class="[section.subHeadlineAdditionalClass, 'toggleable-sub-headline']"
-                       v-text="section.subHeadline"
-                       v-show="section.isShowHeadline">
-                </small>
             </h2>
+            <!-- subheadline -->
+            <p :class="section.subHeadlineAdditionalClass" v-text="section.subHeadline"></p>
         </div>
 
         <!-- Rows - BLock it for animation -->

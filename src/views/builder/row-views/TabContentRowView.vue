@@ -1,10 +1,10 @@
 <template>
     <section>
         <div class="pl-15">
-            <button :class="styles.BUTTON.INFO" class="mr-15" @click="openTabSetting">
+            <button :class="styles.BUTTON.PRIMARY" class="mr-15" @click="openTabSetting">
                 Tab Settings
             </button>
-            <button :class="styles.BUTTON.DANGER" @click="deleteRow">
+            <button :class="styles.BUTTON.WARNING" @click="deleteRow">
                 Delete Tab
             </button>
         </div>

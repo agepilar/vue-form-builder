@@ -21,7 +21,6 @@
     padding-right: 15px;
 }
 
-
 .mr-15 {
     margin-right: 15px;
 }
@@ -46,6 +45,7 @@
     cursor: pointer;
 }
 
+
 /*********************************
 * END GLOBAL PADDING - MARGIN
 **********************************/
@@ -56,24 +56,36 @@
 
 .vue-form-builder .copyright-text {
     padding-top: 20px;
-    color: rgba(0, 0, 0, .4);
+    color: #7b9cbf;
     font-size: 13px;
     text-align: center;
 }
 
 .vue-form-builder .add-section-container {
-    margin-top: 30px;
-    border: 3px rgba(0, 0, 0, .4) dotted;
-    padding: 40px;
-    user-select: none;
-    font-size: 18px;
+    margin-top: 0px;
     position: relative;
+    user-select: none;
     text-align: center;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    color: #fff;
+    background-color: #4374d2;
+    border-color: #4374d2;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
 }
 
 .vue-form-builder .add-section-container:hover {
-    border-color: #4834d4;
     cursor: pointer;
+    font-weight: normal;
+    background-color: #416dc1;
+    border-color: #416dc1;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
 }
 
 .vue-form-builder .add-section-container>p {
@@ -81,11 +93,20 @@
 }
 
 .vue-form-builder .add-section-container:hover>p {
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .vue-form-builder .add-container-list {
-    margin-top: 15px;
+    margin-top: 20px;
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 3px 5px #dfe3e8, 0 -5px 10px #fff;
+    border: 1px solid #fff;
+    border-radius: .25rem;
+    padding-right: 0;
+    right: 0px;
+    width: 100%;
 }
 
 .vue-form-builder .type-desc {
@@ -96,25 +117,35 @@
     font-weight: bold;
 }
 
+.form-headline-container {
+    margin-bottom: 40px;
+}
+
+.section-container {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
+    border: none;
+    background-color: #fff;
+    margin-bottom: 3rem;
+    padding-right: 20px;
+    padding-top: 1px;
+    border-radius: .25rem;
+}
+
 .vue-form-builder .section-container {
     position: relative;
-    border: 2px solid transparent;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    border: none;
+    margin-top: 30px;
 }
 
 .vue-form-builder .section-container:hover,
 .vue-form-builder .section-container.active {
-    border: 2px solid #0198fa;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    border: none;
 }
 
 .vue-form-builder .section-container .section-config {
     position: absolute;
-    top: 5px;
-    right: 5px;
-    display: none;
+    right: 50px;
+    display: block;
 }
 
 .vue-form-builder .section-container:hover .section-config {
@@ -127,21 +158,40 @@
 
 .vue-form-builder .normal-section,
 .vue-form-renderer .normal-section {
-    padding-top: 10px;
+    padding-top: 0;
     padding-bottom: 10px;
+}
+
+.normal-section .headline-block {
+    padding: 15px;
+    margin-top: -20px;
+    margin-right: 15px;
+    background: linear-gradient(to right, #f2f7fc 0, #dbebfb 100%);
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+    -webkit-box-shadow: 0 3px 5px #dfe3e8, 0 -5px 10px #fff;
+    box-shadow: 0 3px 5px #dfe3e8, 0 -5px 10px #fff;
+    border: 1px solid #fff;
 }
 
 .vue-form-builder .headline-block,
 .vue-form-builder .vue-form-renderer {
-    padding: 0 15px;
     user-select: none;
+    padding: 15px;
+    margin-top: -20px;
+    margin-right: 15px;
+    background: linear-gradient(to right, #f2f7fc 0, #dbebfb 100%);
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+    -webkit-box-shadow: 0 3px 5px #dfe3e8, 0 -5px 10px #fff;
+    box-shadow: 0 3px 5px #dfe3e8, 0 -5px 10px #fff;
+    border: 1px solid #fff;
 }
 
 .vue-form-builder .sidebar-form-configuration .headline-block {
-    padding: 0;
-    margin-bottom: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
 }
-
 
 .vue-form-builder .sidebar-form-configuration .headline-block h5 {
     font-size: 16px;
@@ -162,20 +212,31 @@
 
 .vue-form-builder .add-row-container,
 .vue-form-builder .add-control-container {
-    margin-top: 40px;
-    border: 3px rgba(0, 0, 0, .4) dotted;
-    padding: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
     user-select: none;
-    font-size: 18px;
     position: relative;
     text-align: center;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    color: #fff;
+    background-color: #4374d2;
+    border-color: #4374d2;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
 }
 
 .vue-form-builder .add-row-container:hover,
 .vue-form-builder .add-control-container:hover {
-    border-color: #badc58;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: normal;
+    background-color: #416dc1;
+    border-color: #416dc1;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 .vue-form-builder .outer-add-control {
@@ -190,21 +251,18 @@
     padding-left: 10px;
 }
 
+
 /*********************************
 * CONTROL-VIEW CLASS
 **********************************/
+
 .vue-form-builder .control-view {
     padding: 10px;
-    border: 1px solid transparent;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    border: none;
 }
 
-
 .vue-form-builder .control-view:hover {
-    border: 1px solid #bdc3c7;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    border: none;
 }
 
 .vue-form-builder .control-view.active {
@@ -220,11 +278,14 @@
 }
 
 .vue-form-builder .control-list-container.empty {
-    border: 3px dotted #000;
+    border-radius: .25rem;
     padding: 50px 0;
-    color: rgba(0, 0, 0, .4);
     font-size: 14px;
     text-align: center;
+    color: #2e4156;
+    background-color: #fff;
+    box-shadow: inset 0 4px 8px #dfe3e8, inset -5px -5px 10px #fff;
+    border: solid 1px #fff;
 }
 
 .vue-form-builder .control-list-container.empty p {
@@ -243,8 +304,8 @@
     position: absolute;
     top: 0;
     left: 97%;
-    border: 1px solid #bdc3c7;
-    background-color: white;
+    border: none;
+    background-color: #7b9cbf;
     display: none;
 }
 
@@ -255,7 +316,7 @@
 
 .vue-form-builder .control-option-container .option-control {
     padding: 2px 5px;
-    border-bottom: 1px solid #bdc3c7;
+    border-bottom: none;
     cursor: pointer;
 }
 
@@ -280,7 +341,9 @@
     position: relative;
 }
 
+
 /* Tooltip text */
+
 .vue-form-builder .v-tooltip .tooltiptext {
     visibility: hidden;
     width: 200px;
@@ -289,7 +352,6 @@
     text-align: center;
     padding: 10px;
     border-radius: 6px;
-
     /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
@@ -299,7 +361,9 @@
     /* Use half of the width (120/2 = 60), to center the tooltip */
 }
 
+
 /* Show the tooltip text when you mouse over the tooltip container */
+
 .vue-form-builder .v-tooltip:hover .tooltiptext {
     visibility: visible;
 }
@@ -316,6 +380,7 @@
     top: -10px;
     right: 5px;
 }
+
 
 /*********************************
 * SIDEBAR CLASS
@@ -342,11 +407,14 @@
     font-size: 36px;
     margin-right: 50px;
     cursor: pointer;
+    color: #7b9cbf;
 }
 
 body {
     transition: margin-left .5s;
     /* If you want a transition effect */
+    background-color: #fff;
+    color: #2e4156;
 }
 
 .vue-form-builder .sidebar-form-configuration {
@@ -359,12 +427,19 @@ body {
 
 .vue-form-builder .toggleable-section,
 .vue-form-renderer .toggleable-section {
-    padding-top: 10px;
+    padding-top: 0;
     padding-bottom: 10px;
 }
 
 .toggleable-section .headline-block {
-    border-bottom: 1px solid #000;
+    padding: 15px;
+    margin-top: -20px;
+    margin-right: 15px;
+    background: linear-gradient(to right, #f2f7fc 0, #dbebfb 100%);
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+    border: 1px solid #fff;
+    box-shadow: 0 3px 5px #dfe3e8, 0 -5px 10px #fff;
 }
 
 .toggleable-section .headline-block small {
@@ -394,6 +469,7 @@ body {
 
 .vue-form-renderer .control-list-container {
     padding: 0 15px;
+    margin-left: auto;
 }
 
 .vue-form-renderer .control-view div.is-invalid {
@@ -405,24 +481,37 @@ body {
 }
 
 .v-form-alert {
-    padding: 20px;
+    padding: 2%;
     background-color: #dc3545;
     color: white;
     position: fixed;
-    right: 5px;
-    top: 10px;
+    right: 50%;
+    top: 20%;
     z-index: 5;
     border-radius: 5px;
 }
 
 .control-label-container {
     line-height: 17px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
 }
+
+.vue-form-builder .pointer {
+    background-color: #4374d2;
+    border-color: #4374d2;
+    color: #fff;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
 
 /*********************************
 * Vue-Transition Classes - Slide Up/Down
 **********************************/
+
 .slide-enter-active {
     -moz-transition-duration: 0.3s;
     -webkit-transition-duration: 0.3s;
@@ -457,9 +546,12 @@ body {
     max-height: 0;
 }
 
+
 /*************************************************************
 * 3-rd parties css
 *************************************************************/
+
+
 /*!
  *
  *     Litepicker v1.4.5 (https://github.com/wakirin/Litepicker)
@@ -471,6 +563,7 @@ body {
  *     Generated on: 1589809451890
  *
  */
+
 :root {
     --litepickerBgColor: #fff;
     --litepickerMonthHeaderTextColor: #333;
@@ -521,13 +614,13 @@ body {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    background-color: var(--litepickerBgColor);
+    background-color: #ffffff;
     border-radius: 5px;
-    -webkit-box-shadow: 0 0 5px #ddd;
-    box-shadow: 0 0 5px #ddd;
+    box-shadow: 0 .75rem 2.25rem 1rem rgba(0, 0, 0, 0.24);
     width: calc(var(--litepickerMonthWidth) + 10px);
     -webkit-box-sizing: content-box;
-    box-sizing: content-box
+    box-sizing: content-box;
+    border: #ffffff solid 1px;
 }
 
 .litepicker .container__months.columns-2 {
@@ -567,7 +660,8 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    color: var(--litepickerMonthHeaderTextColor)
+    color: #131920;
+    font-size: 1.2rem;
 }
 
 .litepicker .container__months .month-item-header div {
@@ -611,15 +705,16 @@ body {
     border-radius: 3px;
     -webkit-transition: color 0.3s, border 0.3s;
     transition: color 0.3s, border 0.3s;
-    cursor: default
+    cursor: pointer
 }
 
 .litepicker .container__months .month-item-header .button-previous-month>svg,
 .litepicker .container__months .month-item-header .button-previous-month>img,
 .litepicker .container__months .month-item-header .button-next-month>svg,
 .litepicker .container__months .month-item-header .button-next-month>img {
-    fill: var(--litepickerMonthButton);
-    pointer-events: none
+    fill: #0e1317;
+    pointer-events: none;
+    min-height: 16px;
 }
 
 .litepicker .container__months .month-item-header .button-previous-month:hover,
@@ -629,7 +724,7 @@ body {
 
 .litepicker .container__months .month-item-header .button-previous-month:hover>svg,
 .litepicker .container__months .month-item-header .button-next-month:hover>svg {
-    fill: var(--litepickerMonthButtonHover)
+    fill: #131920
 }
 
 .litepicker .container__months .month-item-weekdays-row {
@@ -640,7 +735,7 @@ body {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    color: var(--litepickerMonthWeekdayColor)
+    color: #131920;
 }
 
 .litepicker .container__months .month-item-weekdays-row>div {
@@ -701,13 +796,13 @@ body {
 }
 
 .litepicker .container__days .day-item:hover {
-    color: var(--litepickerDayColorHover);
-    -webkit-box-shadow: inset 0 0 0 1px var(--litepickerDayColorHover);
-    box-shadow: inset 0 0 0 1px var(--litepickerDayColorHover)
+    color: #c9d5e3;
+    -webkit-box-shadow: inset 0 0 0 1px #131920;
+    box-shadow: inset 0 0 0 1px #131920
 }
 
 .litepicker .container__days .day-item.is-today {
-    color: var(--litepickerDayIsTodayColor)
+    color: #c9d5e3
 }
 
 .litepicker .container__days .day-item.is-locked {
@@ -726,7 +821,7 @@ body {
 }
 
 .litepicker .container__days .day-item.is-booked:hover {
-    color: var(--litepickerDayIsBookedColor);
+    color: #131920;
     -webkit-box-shadow: none;
     box-shadow: none;
     cursor: default
@@ -738,8 +833,8 @@ body {
 }
 
 .litepicker .container__days .day-item.is-start-date {
-    color: var(--litepickerDayIsStartColor);
-    background-color: var(--litepickerDayIsStartBg);
+    color: #c9d5e3;
+    background-color: #131920;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border-top-right-radius: 0;
@@ -754,8 +849,8 @@ body {
 }
 
 .litepicker .container__days .day-item.is-end-date {
-    color: var(--litepickerDayIsEndColor);
-    background-color: var(--litepickerDayIsEndBg);
+    color: #c9d5e3;
+    background-color: #131920;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-top-right-radius: 5px;
@@ -892,7 +987,9 @@ body {
     left: 0
 }
 
+
 /** CSS compatibility with vuematerial */
+
 html.md-theme-default .container-fluid.md-layout.form-padding.vue-form-builder,
 html.md-theme-default .container-fluid.md-layout.form-padding.vue-form-renderer {
     margin: auto;
@@ -912,12 +1009,45 @@ html.md-theme-default .vue-form-builder .section-container {
 .md-button.md-info:active:focus,
 .md-button.md-info:active:hover,
 .md-button.md-info:focus,
-.md-button.md-info:hover,
 .open>.md-button.md-info.dropdown-toggle,
 .open>.md-button.md-info.dropdown-toggle:focus,
 .open>.md-button.md-info.dropdown-toggle:hover {
     background-color: #00bcd4 !important;
     color: #fff !important;
+    border-color: #00bcd4;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+}
+
+.md-button.md-info:hover {
+    background-color: #1facbe;
+    border-color: #1facbe;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.md-button.md-primary,
+.md-button.md-primary.active,
+.md-button.md-primary.active:focus,
+.md-button.md-primary.active:hover,
+.md-button.md-primary:active,
+.md-button.md-primary:active:focus,
+.md-button.md-primary:active:hover,
+.md-button.md-primary:focus {
+    color: #fff;
+    background-color: #4374d2;
+    border-color: #4374d2;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+}
+
+.md-button.md-primary:hover {
+    background-color: #416dc1;
+    border-color: #416dc1;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 .md-button.md-secondary,
@@ -941,12 +1071,23 @@ html.md-theme-default .vue-form-builder .section-container {
 .md-button.md-success:active:focus,
 .md-button.md-success:active:hover,
 .md-button.md-success:focus,
-.md-button.md-success:hover,
 .open>.md-button.md-success.dropdown-toggle,
 .open>.md-button.md-success.dropdown-toggle:focus,
 .open>.md-button.md-success.dropdown-toggle:hover {
-    background-color: #4caf50 !important;
-    color: #fff !important;
+    border: #2eb85c solid 1px;
+    color: #fff;
+    background-color: #2eb85c;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+}
+
+.md-button.md-success:hover {
+    color: #fff;
+    background-color: #26994d;
+    border-color: #248f48;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 .md-button.md-warning,
@@ -957,12 +1098,23 @@ html.md-theme-default .vue-form-builder .section-container {
 .md-button.md-warning:active:focus,
 .md-button.md-warning:active:hover,
 .md-button.md-warning:focus,
-.md-button.md-warning:hover,
 .open>.md-button.md-warning.dropdown-toggle,
 .open>.md-button.md-warning.dropdown-toggle:focus,
 .open>.md-button.md-warning.dropdown-toggle:hover {
-    background-color: #ff9800 !important;
-    color: #fff !important;
+    color: #fff;
+    background-color: #e55353;
+    border-color: #e55353;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+}
+
+.md-button.md-warning:hover {
+    color: #fff;
+    background-color: #e03232;
+    border-color: #de2727;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 html.md-theme-default .vue-form-builder .sidebar {
@@ -997,34 +1149,151 @@ html.md-theme-default .vue-form-builder .md-list-item {
     border: 1px solid rgba(0, 0, 0, .125);
 }
 
+.list-group-item:first-child {
+    border-radius: 0%;
+}
+
+.list-group-item {
+    border: none;
+    padding: 15px;
+    border-radius: .25rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #fff;
+    color: #2e4156;
+    transition: color .3s ease, border-color .3s ease, background-color .3s ease, -webkit-box-shadow .3s ease;
+    transition: color .3s ease, border-color .3s ease, background-color .3s ease, box-shadow .3s ease;
+    transition: color .3s ease, border-color .3s ease, background-color .3s ease, box-shadow .3s ease, -webkit-box-shadow .3s ease;
+}
+
+.list-group-item:hover {
+    border: none;
+    background-color: #e9f3fc;
+}
+
+.vue-form-builder .type-headline {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.sidebar-heading {
+    text-transform: uppercase;
+    padding: 5px 0;
+    display: inline-block;
+    font-size: 18px;
+    color: #3c4858;
+    white-space: nowrap;
+    font-weight: 400;
+    line-height: 30px;
+    overflow: hidden;
+    text-align: center;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    background: no-repeat bottom, 50% calc(100% - 1px);
+    background-size: 0 100%, 100% 100%;
+    border: none;
+    box-shadow: none;
+    height: 36px;
+    transition: background 0s ease-out;
+    transition-duration: 0s;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
+    background-image: linear-gradient(0deg, #738ca8 2px, rgba(156, 39, 176, 0) 0), linear-gradient(0deg, #d2d2d2 1px, hsla(0, 0%, 82%, 0) 0);
+}
+
+.form-control:focus {
+    background-size: 100% 100%, 100% 100%;
+    transition-duration: .3s;
+    box-shadow: none;
+}
+
+.form-control[readonly] {
+    background-color: #fff;
+}
+
+.form-control::placeholder {
+    color: rgb(123, 156, 191);
+    font-style: italic;
+}
+
+.form-control:focus::placeholder {
+    opacity: 0;
+}
+
+.btn-row {
+    margin-bottom: 10px;
+}
+
+svg {
+    width: 1em;
+    height: 1em;
+}
+
+.h2,
+h2 {
+    font-size: 1rem;
+}
+
+p {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    margin-right: 5px;
+}
+
 @media (max-width: 768px) {
     html.md-theme-default .vue-form-builder .sidebar {
         right: 60%;
     }
 }
 
+
 /*******************************************************************
 * Tab View CSS
 *******************************************************************/
+
 .tabs {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     position: relative;
-    background: white;
     padding-bottom: 20px;
     width: 100%;
     min-width: 240px;
 }
+
 .tabs input[name="tab-control"] {
     display: none;
 }
+
 .tabs .content section h2,
 .tabs ul li label {
-    font-weight: bold;
-    font-size: 18px;
-    color: #428BFF;
+    font-weight: normal;
+    font-size: 16px;
+    color: #7b9cbf;
 }
+
 .tabs ul {
     list-style-type: none;
     padding-left: 0;
@@ -1040,6 +1309,7 @@ html.md-theme-default .vue-form-builder .md-list-item {
     align-items: flex-end;
     flex-wrap: wrap;
 }
+
 .tabs ul li {
     box-sizing: border-box;
     -webkit-box-flex: 1;
@@ -1048,6 +1318,7 @@ html.md-theme-default .vue-form-builder .md-list-item {
     padding: 0 10px;
     text-align: center;
 }
+
 .tabs ul li label {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -1065,10 +1336,13 @@ html.md-theme-default .vue-form-builder .md-list-item {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    padding: 10px;
 }
+
 .tabs ul li label br {
     display: none;
 }
+
 .tabs ul li label svg {
     fill: #929daf;
     height: 1.2em;
@@ -1077,25 +1351,35 @@ html.md-theme-default .vue-form-builder .md-list-item {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
-.tabs ul li label:hover, .tabs ul li label:focus, .tabs ul li label:active {
+
+.tabs ul li label:hover,
+.tabs ul li label:focus,
+.tabs ul li label:active {
     outline: 0;
     color: #bec5cf;
 }
-.tabs ul li label:hover svg, .tabs ul li label:focus svg, .tabs ul li label:active svg {
+
+.tabs ul li label:hover svg,
+.tabs ul li label:focus svg,
+.tabs ul li label:active svg {
     fill: #bec5cf;
 }
+
 .tabs ul li label.add-row {
-    color:black;
+    color: black;
 }
+
 .tabs ul li label.add-row svg {
     fill: #27ae60;
 }
+
 .tabs .slider {
     position: relative;
     width: 25%;
     -webkit-transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
     transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
 }
+
 .tabs .slider .indicator {
     position: relative;
     width: 50px;
@@ -1105,9 +1389,11 @@ html.md-theme-default .vue-form-builder .md-list-item {
     background: #428BFF;
     border-radius: 1px;
 }
+
 .tabs .content {
     margin-top: 30px;
 }
+
 .tabs .content section {
     display: none;
     -webkit-animation-name: content;
@@ -1122,10 +1408,12 @@ html.md-theme-default .vue-form-builder .md-list-item {
     animation-iteration-count: 1;
     line-height: 1.4;
 }
+
 .tabs .content section h2 {
     color: #428BFF;
     display: none;
 }
+
 .tabs .content section h2::after {
     content: "";
     position: relative;
@@ -1136,82 +1424,115 @@ html.md-theme-default .vue-form-builder .md-list-item {
     margin-top: 5px;
     left: 1px;
 }
-.tabs input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label {
+
+.tabs input[name="tab-control"]:nth-of-type(1):checked~ul>li:nth-child(1)>label {
     cursor: default;
-    color: #428BFF;
+    color: #7b9cbf;
+    box-shadow: 0 3px 0 #7b9cbf inset;
+    background: transparent;
+    padding: 10px;
 }
-.tabs input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label svg {
-    fill: #428BFF;
+
+.tabs input[name="tab-control"]:nth-of-type(1):checked~ul>li:nth-child(1)>label svg {
+    fill: #7b9cbf;
 }
+
 @media (max-width: 600px) {
-    .tabs input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label {
+    .tabs input[name="tab-control"]:nth-of-type(1):checked~ul>li:nth-child(1)>label {
         background: rgba(0, 0, 0, 0.08);
     }
 }
-.tabs input[name="tab-control"]:nth-of-type(1):checked ~ .slider {
+
+.tabs input[name="tab-control"]:nth-of-type(1):checked~.slider {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
 }
-.tabs input[name="tab-control"]:nth-of-type(1):checked ~ .content > section:nth-child(1) {
+
+.tabs input[name="tab-control"]:nth-of-type(1):checked~.content>section:nth-child(1) {
     display: block;
 }
-.tabs input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label {
+
+.tabs input[name="tab-control"]:nth-of-type(2):checked~ul>li:nth-child(2)>label {
     cursor: default;
-    color: #428BFF;
+    color: #7b9cbf;
+    box-shadow: 0 3px 0 #7b9cbf inset;
+    background: transparent;
+    padding: 10px;
 }
-.tabs input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label svg {
+
+.tabs input[name="tab-control"]:nth-of-type(2):checked~ul>li:nth-child(2)>label svg {
     fill: #428BFF;
 }
+
 @media (max-width: 600px) {
-    .tabs input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label {
+    .tabs input[name="tab-control"]:nth-of-type(2):checked~ul>li:nth-child(2)>label {
         background: rgba(0, 0, 0, 0.08);
     }
 }
-.tabs input[name="tab-control"]:nth-of-type(2):checked ~ .slider {
+
+.tabs input[name="tab-control"]:nth-of-type(2):checked~.slider {
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
 }
-.tabs input[name="tab-control"]:nth-of-type(2):checked ~ .content > section:nth-child(2) {
+
+.tabs input[name="tab-control"]:nth-of-type(2):checked~.content>section:nth-child(2) {
     display: block;
 }
-.tabs input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label {
+
+.tabs input[name="tab-control"]:nth-of-type(3):checked~ul>li:nth-child(3)>label {
     cursor: default;
-    color: #428BFF;
+    color: #7b9cbf;
+    box-shadow: 0 3px 0 #7b9cbf inset;
+    background: transparent;
+    padding: 10px;
 }
-.tabs input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label svg {
+
+.tabs input[name="tab-control"]:nth-of-type(3):checked~ul>li:nth-child(3)>label svg {
     fill: #428BFF;
 }
+
 @media (max-width: 600px) {
-    .tabs input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label {
+    .tabs input[name="tab-control"]:nth-of-type(3):checked~ul>li:nth-child(3)>label {
         background: rgba(0, 0, 0, 0.08);
     }
 }
-.tabs input[name="tab-control"]:nth-of-type(3):checked ~ .slider {
+
+.tabs input[name="tab-control"]:nth-of-type(3):checked~.slider {
     -webkit-transform: translateX(200%);
     transform: translateX(200%);
 }
-.tabs input[name="tab-control"]:nth-of-type(3):checked ~ .content > section:nth-child(3) {
+
+.tabs input[name="tab-control"]:nth-of-type(3):checked~.content>section:nth-child(3) {
     display: block;
 }
-.tabs input[name="tab-control"]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label {
+
+.tabs input[name="tab-control"]:nth-of-type(4):checked~ul>li:nth-child(4)>label {
     cursor: default;
-    color: #428BFF;
+    color: #7b9cbf;
+    box-shadow: 0 3px 0 #7b9cbf inset;
+    background: transparent;
+    padding: 10px;
 }
-.tabs input[name="tab-control"]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label svg {
+
+.tabs input[name="tab-control"]:nth-of-type(4):checked~ul>li:nth-child(4)>label svg {
     fill: #428BFF;
 }
+
 @media (max-width: 600px) {
-    .tabs input[name="tab-control"]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label {
+    .tabs input[name="tab-control"]:nth-of-type(4):checked~ul>li:nth-child(4)>label {
         background: rgba(0, 0, 0, 0.08);
     }
 }
-.tabs input[name="tab-control"]:nth-of-type(4):checked ~ .slider {
+
+.tabs input[name="tab-control"]:nth-of-type(4):checked~.slider {
     -webkit-transform: translateX(300%);
     transform: translateX(300%);
 }
-.tabs input[name="tab-control"]:nth-of-type(4):checked ~ .content > section:nth-child(4) {
+
+.tabs input[name="tab-control"]:nth-of-type(4):checked~.content>section:nth-child(4) {
     display: block;
 }
+
 @-webkit-keyframes content {
     from {
         opacity: 0;
@@ -1224,6 +1545,7 @@ html.md-theme-default .vue-form-builder .md-list-item {
         transform: translateY(0%);
     }
 }
+
 @keyframes content {
     from {
         opacity: 0;
@@ -1236,6 +1558,7 @@ html.md-theme-default .vue-form-builder .md-list-item {
         transform: translateY(0%);
     }
 }
+
 @media (max-width: 1000px) {
     .tabs ul li label {
         white-space: initial;
@@ -1247,6 +1570,7 @@ html.md-theme-default .vue-form-builder .md-list-item {
         height: 1.5em;
     }
 }
+
 @media (max-width: 600px) {
     .tabs ul li label {
         padding: 5px;
@@ -1266,23 +1590,35 @@ html.md-theme-default .vue-form-builder .md-list-item {
     }
 }
 
+
 /********************************************************
 * Modal CSS - Good enough to use - standalone
 * Ref: https://www.w3schools.com/howto/howto_css_modals.asp
 ********************************************************/
+
+
 /* The Modal (background) */
+
 #vfb-global-modal.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    padding-top:100px;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    padding-top: 100px;
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
 }
 
 #vfb-global-modal .modal-header {
@@ -1295,12 +1631,16 @@ html.md-theme-default .vue-form-builder .md-list-item {
     display: block;
 }
 
+
 /* Modal Body */
+
 #vfb-global-modal .modal-body {
     padding: 10px 16px;
 }
 
+
 /* Modal Content */
+
 #vfb-global-modal .modal-content {
     position: relative;
     background-color: #fefefe;
@@ -1308,7 +1648,7 @@ html.md-theme-default .vue-form-builder .md-list-item {
     padding: 0;
     border: 1px solid #888;
     width: 50%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     animation-name: animatetop;
     animation-duration: 0.4s
 }
@@ -1320,8 +1660,16 @@ html.md-theme-default .vue-form-builder .md-list-item {
     cursor: pointer;
 }
 
+
 /* Add Animation */
+
 @keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
 }
